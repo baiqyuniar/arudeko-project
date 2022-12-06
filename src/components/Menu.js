@@ -1,7 +1,9 @@
 import React from "react";
 import Dropdown from "./Dropdown";
+import { useNavigate } from "react-router-dom";
 
 const Menu = ({ items }) => {
+  const navigate = useNavigate();
   return (
     <li className="py-2 px-5 uppercase group relative dropdown hover:text-[#FAC213]">
       {items.submenu ? (
@@ -12,7 +14,12 @@ const Menu = ({ items }) => {
           <Dropdown submenus={items.submenu} />
         </>
       ) : (
-        <a href={items.url}>{items.title}</a>
+        <a href="/" onClick={(e) =>
+          {
+            e.preventDefault();
+            navigate(items.url)
+          }
+        }>{items.title}</a>
       )}
     </li>
   );
