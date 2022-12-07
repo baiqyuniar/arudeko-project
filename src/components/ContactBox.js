@@ -26,8 +26,8 @@ const ContactBox = () => {
   };
 
   return (
-    <div class="flex container items-center justify-center lg:ml-[420px] p-12">
-      <div className="bg-white flex justify-between rounded gap-32 lg:mt-24">
+    <div class="flex container items-center justify-center mx-auto p-12">
+      <div className="bg-white flex justify-between rounded lg:gap-32 gap-2 lg:mt-24">
         <div class="w-full max-w-[550px] mx-8">
           <h1 className="lg:text-3xl font-bold tracking-wider m-4">
             INQUIRY OR FEEDBACK
@@ -75,7 +75,7 @@ const ContactBox = () => {
               ></textarea>
             </div>
 
-            <div>
+            <div className="flex items-center justify-center">
               <button
                 type="submit"
                 class="hover:shadow-form rounded-full bg-[#8A423E] py-3 px-8 text-base font-semibold text-white outline-none"

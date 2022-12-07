@@ -13,7 +13,7 @@ const Contact = () => {
       <section id="content" className="bg-split pt-8">
         <div>
           <div className="container mx-auto">
-            <h1 className="text-white pt-24 text-base lg:text-6xl">
+            <h1 className="text-white pt-24 text-base md:text-center lg:text-left text-6xl">
               Contact Us
             </h1>
           </div>

@@ -24,7 +24,7 @@ const SidebarAbout = () => {
               vision & mission
             </p>
             <svg
-              className="w-8 h-8 mr-2"
+              className="w-8 h-8 mr-2 hidden lg:block"
               clip-rule="evenodd"
               fill-rule="evenodd"
               stroke-linejoin="round"
@@ -43,7 +43,7 @@ const SidebarAbout = () => {
               company history
             </p>
             <svg
-              className="w-8 h-8 mr-2"
+              className="w-8 h-8 mr-2  hidden lg:block"
               clip-rule="evenodd"
               fill-rule="evenodd"
               stroke-linejoin="round"
@@ -63,7 +63,7 @@ const SidebarAbout = () => {
           >
             <p className="uppercase font-poppins text-lg ml-4">company video</p>
             <svg
-              className="w-8 h-8 mr-2"
+              className="w-8 h-8 mr-2  hidden lg:block"
               clip-rule="evenodd"
               fill-rule="evenodd"
               stroke-linejoin="round"

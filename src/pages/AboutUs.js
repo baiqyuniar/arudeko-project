@@ -25,9 +25,9 @@ const AboutUs = () => {
       </section>
 
       <section id="content" className="w-full my-12">
-        <div className="container mx-auto flex">
+        <div className="container mx-auto flex flex-col md:flex-row">
           <SidebarAbout />
-          <div className="ml-20">
+          <div className="lg:ml-20 mx-auto">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none uppercase tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                 <span className="relative inline-block">
@@ -65,7 +65,8 @@ const AboutUs = () => {
                 Tangerang.
               </p>
             </div>
-            <div className="flex">
+
+            <div className="flex flex-col lg:flex-row">
               <img
                 className="shadow-md rounded-md"
                 src={require("../assets/AboutUs.png")}

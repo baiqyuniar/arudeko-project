@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         footer: "url('./assets/Footer.jpg')",
-        hero: "url('./assets/Banner3.jpg')",
+        hero: "url('./assets/Banner5.jpg')",
         split: "linear-gradient(to bottom, #634909 50% , #FFF 50%);",
       },
       fontFamily: {
