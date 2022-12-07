@@ -105,16 +105,16 @@ const Footer = () => {
               <p class="font-bold">Popular Articles</p>
               <nav class="flex flex-col mt-4 space-y-2 text-sm">
                 <a class="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Lantai Kayu
+                  Article 1
                 </a>
                 <a class="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Panel Dinding
+                  Article 2
                 </a>
                 <a class="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Atap Rumah
+                  Article 3
                 </a>
                 <a class="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Plafon PVC Minimalis
+                  Article 4
                 </a>
               </nav>
             </div>
