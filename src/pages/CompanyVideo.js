@@ -18,9 +18,9 @@ const CompanyVideo = () => {
           <img src={require("../assets/AR2.png")} className="h-64" />
           <img src={require("../assets/AO1.png")} className="h-64" />
           <img src={require("../assets/AR3.png")} className="h-64" />
-          <img src={require("../assets/img1.png")} className="h-64" />
-          <img src={require("../assets/img2.png")} className="h-64" />
-          <img src={require("../assets/img3.png")} className="h-64 w-20" />
+          <img src={require("../assets/img1.png")} className="h-64 w-[111px]" />
+          {/* <img src={require("../assets/img2.png")} className="h-64" />
+          <img src={require("../assets/img3.png")} className="h-64 w-20" /> */}
         </div>
       </section>
 

@@ -158,10 +158,10 @@ const HomeScreen = () => {
       </section> */}
 
       <section id="hero" className="w-full">
-        <div className="absolute z-10 mt-40 container ml-[425px]">
+        <div className="absolute z-10 lg:mt-20 container mx-8 lg:mx-[183px]">
           <div className="mx-auto w-full flex flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 flex flex-col justify-center  items-center text-white">
-              <div className="p-5 flex flex-col justify-center items-center bg-black opacity-70 rounded-2xl lg:items-start text-center lg:text-left">
+              <div className="lg:px-5 flex flex-col justify-center items-center bg-black opacity-70 rounded-2xl lg:items-start text-center lg:text-left">
                 <h1 className="py-10  text-2xl sm:text-5xl font-light tracking-wide leading-tight">
                   Arsitektur, <br />
                   Bangunan, <br />
@@ -227,7 +227,7 @@ const HomeScreen = () => {
               </div>
             </div>
           </div>
-          <div className="mt-14 mb-24 bg-[#e3dac4] rounded-lg p-5 w-full grid grid-cols-12 sm:grid-cols-4 gap-2 text-xs md:text-sm">
+          <div className="lg:mt-8 md:mt-0 md:p-0 mb-24 bg-[#e3dac4] rounded-lg p-5 w-full md:h-24 grid grid-cols-12 sm:grid-cols-4 gap-2 text-xs md:text-sm">
             <div
               onClick={() => navigate("/hotel")}
               className="cursor-pointer col-span-4 sm:col-span-1 inline-flex flex-col items-center border-r border-gray-700 text-black uppercase"
