@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hero from "./pages/Hero";
 
 const HomeScreen = lazy(() => import("./pages/HomeScreen"));
 const Teams = lazy(() => import("./pages/Teams"));
@@ -48,6 +49,15 @@ const App = () => {
             </Suspense>
           }
         />
+        <Route
+          path="/hero"
+          element={
+            <Suspense fallback={false}>
+              <Hero />
+            </Suspense>
+          }
+        />
+
         <Route
           path="/news"
           element={

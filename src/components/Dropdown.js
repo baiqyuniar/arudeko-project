@@ -10,12 +10,15 @@ const Dropdown = ({ submenus }) => {
           key={index}
           className="mt-4 w-64 p-2 hover:bg-[#FAC213] rounded-md text-white"
         >
-          <a href="/" onClick={(e) =>
-            {
+          <a
+            href="/"
+            onClick={(e) => {
               e.preventDefault();
-              navigate(submenu.url)
-            }
-          }>{submenu.title}</a>
+              navigate(submenu.url);
+            }}
+          >
+            {submenu.title}
+          </a>
         </li>
       ))}
     </ul>

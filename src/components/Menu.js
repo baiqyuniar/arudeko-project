@@ -14,12 +14,15 @@ const Menu = ({ items }) => {
           <Dropdown submenus={items.submenu} />
         </>
       ) : (
-        <a href="/" onClick={(e) =>
-          {
+        <a
+          href="/"
+          onClick={(e) => {
             e.preventDefault();
-            navigate(items.url)
-          }
-        }>{items.title}</a>
+            navigate(items.url);
+          }}
+        >
+          {items.title}
+        </a>
       )}
     </li>
   );

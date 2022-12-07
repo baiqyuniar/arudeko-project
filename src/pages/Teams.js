@@ -9,7 +9,7 @@ const Teams = () => {
         <Header />
       </section>
 
-      <section id="content" className="w-full">
+      <section id="content" className="w-full pt-32">
         <div className="container mx-auto">
           <div class="text-center pb-8 lg:mt-8">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none uppercase tracking-tight text-gray-900 sm:text-5xl md:mx-auto">

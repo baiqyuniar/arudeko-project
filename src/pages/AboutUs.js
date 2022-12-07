@@ -11,7 +11,7 @@ const AboutUs = () => {
       </section>
 
       <section id="banner">
-        <div className="container flex">
+        <div className="container flex pt-[87px]">
           <img src={require("../assets/AH1.png")} className="h-64" />
           <img src={require("../assets/AH2.png")} className="h-64" />
           <img src={require("../assets/AR1.png")} className="h-64" />

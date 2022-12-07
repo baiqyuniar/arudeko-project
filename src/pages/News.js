@@ -9,7 +9,7 @@ const News = () => {
         <Header />
       </section>
 
-      <section id="content" className="w-full my-8">
+      <section id="content" className="w-full pt-24">
         <div className="container mx-auto">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12 lg:mt-12">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none uppercase tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -74,7 +74,7 @@ const News = () => {
                   Popular News
                 </h2>
               </div>
-              <div className="p-4 mb-4 border-b hover:bg-slate-300 hover:rounded-lg">
+              <div className="p-4 mb-4 hover:cursor-default border-b hover:bg-slate-300 hover:rounded-lg">
                 <h6 className="mb-2 font-semibold leading-5">Lorem Ipsum</h6>
                 <p className="text-base text-gray-900">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -85,7 +85,7 @@ const News = () => {
                   eleifend nec a neque.
                 </p>
               </div>
-              <div className="p-4 mb-4 border-b hover:bg-slate-300 hover:rounded-lg">
+              <div className="p-4 mb-4 hover:cursor-default border-b hover:bg-slate-300 hover:rounded-lg">
                 <h6 className="mb-2 font-semibold leading-5">Lorem Ipsum</h6>
                 <p className="text-base text-gray-900">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -96,7 +96,7 @@ const News = () => {
                   eleifend nec a neque.
                 </p>
               </div>
-              <div className="p-4 mb-4 border-b hover:bg-slate-300 hover:rounded-lg">
+              <div className="p-4 mb-4 hover:cursor-default border-b hover:bg-slate-300 hover:rounded-lg">
                 <h6 className="mb-2 font-semibold leading-5">Lorem Ipsum</h6>
                 <p className="text-base text-gray-900">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
