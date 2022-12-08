@@ -6,30 +6,33 @@ import Footer from "../components/Footer";
 const AboutUs = () => {
   return (
     <div>
-      <section id="header">
+      <section id="header" className="">
         <Header />
       </section>
 
       <section id="banner">
-        <div className="container flex pt-[87px]">
-          <img src={require("../assets/AH1.png")} className="h-64" />
+        <div className="lg:py-32 bg-hero">
+          {/* <img src={require("../assets/AH1.png")} className="h-64" />
           <img src={require("../assets/AH2.png")} className="h-64" />
           <img src={require("../assets/AR1.png")} className="h-64" />
           <img src={require("../assets/AR2.png")} className="h-64" />
           <img src={require("../assets/AO1.png")} className="h-64" />
           <img src={require("../assets/AR3.png")} className="h-64" />
-          <img src={require("../assets/img1.png")} className="h-64 w-[111px]" />
+          <img src={require("../assets/img1.png")} className="h-64 w-[111px]" /> */}
           {/* <img src={require("../assets/img2.png")} className="h-64" />
           <img src={require("../assets/img3.png")} className="h-64 w-20" /> */}
         </div>
       </section>
 
-      <section id="content" className="w-full my-12">
-        <div className="container mx-auto flex flex-col md:flex-row">
-          <SidebarAbout />
+      <section id="content" className="w-full lg:my-12 my-4">
+        <div className="container mx-auto flex flex-col lg:flex-row">
+          <div className="lg:w-2/4 lg:mt-24 mt-16">
+            <SidebarAbout />
+          </div>
+
           <div className="lg:ml-20 mx-auto">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none uppercase tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <div className="max-w-xl mb-10 mx-auto sm:text-center lg:max-w-2xl md:my-8 ">
+              <h2 className="max-w-lg my-8 font-sans text-3xl font-bold leading-none uppercase tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                 <span className="relative inline-block">
                   <svg
                     viewBox="0 0 52 24"
@@ -68,7 +71,7 @@ const AboutUs = () => {
 
             <div className="flex flex-col lg:flex-row">
               <img
-                className="shadow-md rounded-md"
+                className="shadow-md mx-auto rounded-md my-4 w-3/4 h-auto lg:w-auto"
                 src={require("../assets/AboutUs.png")}
               />
               <div className="flex justify-center items-center flex-col">
@@ -80,7 +83,7 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="my-8">
               <h1 className="text-2xl text-center font-bold uppercase my-4">
                 Our Vision
               </h1>

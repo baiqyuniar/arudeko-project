@@ -16,7 +16,9 @@ const HomeScreen = () => {
 
   return (
     <div className="w-full body-font font-poppins shadow-sm">
-      <Header />
+      <section id="header">
+        <Header />
+      </section>
 
       {/* <section
         id="hero"
@@ -158,32 +160,89 @@ const HomeScreen = () => {
       </section> */}
 
       <section id="hero" className="w-full">
-        <div className="absolute z-10 lg:mt-20 container left-1/2 transform -translate-x-1/2">
+        <div className="absolute z-10 container mx-auto lg:mt-12 left-1/2 transform -translate-x-1/2">
           <div className="mx-auto w-full flex flex-col lg:flex-row">
-            <div className="w-full md:mt-24 lg:w-1/2 flex flex-col justify-center  items-center text-white">
-              <div className="lg:px-5 flex flex-col justify-center items-center bg-black opacity-70 rounded-2xl lg:items-start text-center lg:text-left">
-                <h1 className="py-10 md:py-4 text-2xl sm:text-5xl font-light tracking-wide leading-tight">
-                  Arsitektur, <br className="md:hidden" />
-                  Bangunan, <br />
-                  Interior kantor, hunian, dan ruko
-                </h1>
+            <div className="flex flex-row">
+              <div className="w-full grid grid-col-1 mt-24 lg:mt-16 md:grid-row-2 justify-center  items-center text-white">
+                <div className="lg:px-5 flex flex-col justify-center items-center bg-black opacity-70 rounded-2xl lg:items-start text-center lg:text-left">
+                  <h1 className="py-4 lg:text-4xl md:py-4 md:text-2xl sm:text-xl md:font-light font-bold tracking-wide leading-tight">
+                    Arsitektur, <br className="" />
+                    Bangunan, <br className="" />
+                    Interior kantor, hunian, dan ruko
+                  </h1>
+                  <div className="my-0 w-full hidden md:block rounded-full">
+                    <p className="text-2xl  text-center font-bold text-white tracking-wide">
+                      PT. Abiudaya Raya Utama
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="my-4 bg-black w-full opacity-70 rounded-full">
-                <p className="text-2xl  text-center font-bold text-white tracking-wide">
-                  PT. Abiudaya Raya Utama
-                </p>
+
+              <div className="w-full flex flex-col justify-center items-center overflow-hidden">
+                <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-24 lg:block hidden">
+                  <div class="lg:flex lg:flex-wrap -m-1 md:-m-2">
+                    <div class="flex  flex-wrap w-1/2">
+                      <div class="w-1/2 p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/img1.png")}
+                        />
+                      </div>
+                      <div class="w-1/2 p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/img2.png")}
+                        />
+                      </div>
+                      <div class="w-full p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/AO2.png")}
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/2">
+                      <div class="w-full p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/AR1.png")}
+                        />
+                      </div>
+                      <div class="w-1/2 p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/AR3.png")}
+                        />
+                      </div>
+                      <div class="w-1/2 p-1 md:p-2">
+                        <img
+                          alt="gallery"
+                          class="block object-cover object-center w-full h-full rounded-lg"
+                          src={require("../assets/AH1.png")}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col justify-center items-center overflow-hidden">
-              <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-                <div class="flex flex-wrap -m-1 md:-m-2">
+
+            {/* <div className="w-full flex flex-col justify-center items-center overflow-hidden">
+              <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-24">
+                <div class="lg:flex lg:flex-wrap -m-1 md:-m-2 hidden">
                   <div class="flex flex-wrap w-1/2">
                     <div class="w-1/2 p-1 md:p-2">
                       <img
                         alt="gallery"
                         class="block object-cover object-center w-full h-full rounded-lg"
                         src={require("../assets/img1.png")}
-                      />
+                        />
                     </div>
                     <div class="w-1/2 p-1 md:p-2">
                       <img
@@ -200,6 +259,7 @@ const HomeScreen = () => {
                       />
                     </div>
                   </div>
+
                   <div class="flex flex-wrap w-1/2">
                     <div class="w-full p-1 md:p-2">
                       <img
@@ -225,9 +285,10 @@ const HomeScreen = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="lg:mt-4 lg:h-auto mb-24 bg-[#e3dac4] rounded-lg p-5 w-full md:h-24 grid grid-cols-12 sm:grid-cols-4 gap-2 text-xs md:text-sm">
+
+          <div className="h-auto mx-auto bg-[#e3dac4] rounded-lg md:w-3/4 md:h-2/4 lg:grid lg:grid-cols-4 py-2 gap-2 hidden text-xs md:text-sm ">
             <div
               onClick={() => navigate("/hotel")}
               className="cursor-pointer  col-span-4 sm:col-span-1 inline-flex flex-col items-center border-r border-gray-700 text-black uppercase"
@@ -299,7 +360,7 @@ const HomeScreen = () => {
 
         <Fade {...props}>
           {sliderData.map((sliderData, index) => (
-            <div className="items-center md:mt-22 mt-[87px]" key={index}>
+            <div className="items-center md:mt-22 h-auto mt-[87px]" key={index}>
               <div className="relative">
                 <img
                   className="object-cover w-full h-auto rounded shadow-lg"
@@ -314,13 +375,13 @@ const HomeScreen = () => {
 
       <section id="news">
         <div className="flex justify-center items-center">
-          <div className="bg-[#906A0B] absolute z-10 lg:w-[600px] w-96 h-16 rounded-xl mt-12 mb-12">
-            <h2 className="px-3 text-2xl flex items-center justify-center mt-4 lg:text-2xl text-white font-bold uppercase tracking-widest font-extrabold  antialiased">
+          <div className="bg-[#906A0B] absolute z-10 sm:block hidden flex items-center justify-center lg:w-[600px] w-[300px] md:h-16 h-8 rounded-xl mt-12 mb-12">
+            <h2 className="px-3 text-xl lg:mt-4 py-1 text-center md:text-2xl text-white font-bold uppercase tracking-widest font-extrabold  antialiased">
               Latest News
             </h2>
           </div>
         </div>
-        <div class="container px-5 py-24 md:mt-4 mt-16 mx-auto wrapper">
+        <div class="container px-5 py-4 md:py-24 md:mt-4 mt-8 mx-auto wrapper">
           <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
             <a href="/" aria-label="View Item">
               <div className="overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">

@@ -5,7 +5,7 @@ const Header = () => {
   const [state, setState] = useState(false);
 
   return (
-    <header className="w-full bg-[#906A0B] absolute z-50 opacity-[0.9] text-white body-font font-poppins shadow-sm">
+    <header className="w-full bg-[#906A0B] absolute z-50 text-white body-font font-poppins top-0 shadow-sm">
       <div className="container mx-auto flex justify-between items-center py-3 px-5">
         <a href="/">
           <img

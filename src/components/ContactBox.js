@@ -27,8 +27,8 @@ const ContactBox = () => {
 
   return (
     <div class="flex container items-center justify-center mx-auto p-12">
-      <div className="bg-white flex justify-between rounded lg:gap-32 gap-2 lg:mt-24">
-        <div class="w-full max-w-[550px] mx-8">
+      <div className="bg-white flex flex-col-reverse lg:flex-row justify-between rounded lg:gap-32 gap-2 lg:mt-24">
+        <div class="w-full lg:max-w-[550px] lg:mx-8 px-2 mx-0">
           <h1 className="lg:text-3xl font-bold tracking-wider m-4">
             INQUIRY OR FEEDBACK
           </h1>
@@ -86,7 +86,7 @@ const ContactBox = () => {
           </form>
         </div>
 
-        <div className="lg:mt-24">
+        <div className="lg:mt-24 mt-8">
           <h1 className="uppercase lg:text-2xl text-center font-bold lg:my-1 mx-8">
             informations
           </h1>

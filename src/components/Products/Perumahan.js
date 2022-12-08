@@ -21,7 +21,7 @@ const Perumahan = () => {
             </div>
 
             <div className="mt-6 mx-auto">
-              <ul className="grid grid-flow-col auto-cols-fr gap-4">
+              <ul className="grid md:grid-flow-col md:auto-cols-fr grid-cols-2 gap-4">
                 {perumahanList.pictures.slice(0, 4).map((picture, index) => (
                   <li
                     key={picture.alt}

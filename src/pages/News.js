@@ -53,12 +53,12 @@ const News = () => {
                 src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt=""
               />
-              <p className="w-full mt-4">
+              <p className="w-full mt-4 px-8">
                 PT. Abiudaya Raya Utama berkomitmen untuk menghasilkan hasil
                 bangunan arsitektur, dan interior yang bermutu dan berorientasi
                 pada kepuasaan konsumen.
               </p>
-              <p className="w-full mt-2">
+              <p className="w-full mt-2 px-8">
                 Proyek yang dikerjakan meliputi, rumah, kantor, apartment, dan
                 hotel. Sejak tahun 2021 PT . Abiudaya Raya Utama telah
                 mengembangkan sayap perkerjaan dilingkup perkerjaan arsitektur,

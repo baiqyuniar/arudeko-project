@@ -5,11 +5,11 @@ const SidebarAbout = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="my-2 w-3/4 p-4 h-auto">
+    <div className="my-2 lg:w-3/4 p-4 h-auto">
       <h1 className="uppercase font-poppins text-xl font-bold text-center">
         about us
       </h1>
-      <p className="my-8 text-center font-poppins text-center">
+      <p className="lg:block hidden lg:my-8  text-center font-poppins text-center">
         PT. Abiudaya Raya Utama didirikan sejak tahun 2021. Dibentuk pertama
         kali di JL.Barata Raya, Tangerang dengan lingkup kerja sebagai interior
         Desain dan pembangunanya, dengan CEO ialah Lucy Farida Fatmasari
