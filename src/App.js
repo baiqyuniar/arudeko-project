@@ -1,24 +1,25 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ContactPage from "./pages/ContactPage";
+import NewsPage from "./pages/NewsPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import AboutPage from "./pages/AboutPage";
+import VideoPage from "./pages/VideoPage";
+import PublikPage from "./pages/PortfolioPages/PublikPage";
+import RumahPage from "./pages/PortfolioPages/RumahPage";
+import HotelPage from "./pages/PortfolioPages/HotelPage";
+import KantorPage from "./pages/PortfolioPages/KantorPage";
+import LobbyPage from "./pages/PortfolioPages/LobbyPage";
+import StudioPage from "./pages/PortfolioPages/StudioPage";
+import BrPage from "./pages/PortfolioPages/BrPage";
+import CoffeePage from "./pages/PortfolioPages/CoffeePage";
+import BedroomPage from "./pages/PortfolioPages/BedroomPage";
+import PerumahanPage from "./pages/PortfolioPages/PerumahanPage";
+import KecamatanPage from "./pages/PortfolioPages/KecamatanPage";
+import ArsitekSipil from "./pages/profil/ArsitekSipil";
+import ArsitekInterior from "./pages/profil/ArsitekInterior";
 
-const HomeScreen = lazy(() => import("./pages/HomeScreen"));
-const Teams = lazy(() => import("./pages/Teams"));
-const News = lazy(() => import("./pages/News"));
-const CompanyVideo = lazy(() => import("./pages/CompanyVideo"));
-const Project = lazy(() => import("./pages/Project"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Contact = lazy(() => import("./pages/Contact"));
-const HotelPage = lazy(() => import("./pages/Products/Hotel"));
-const RumahPage = lazy(() => import("./pages/Products/Rumah"));
-const KantorPage = lazy(() => import("./pages/Products/Kantor"));
-const LobbyPage = lazy(() => import("./pages/Products/Lobby"));
-const StudioPage = lazy(() => import("./pages/Products/Studio"));
-const BrPage = lazy(() => import("./pages/Products/Br"));
-const CoffeePage = lazy(() => import("./pages/Products/Coffee"));
-const BedPage = lazy(() => import("./pages/Products/Bed"));
-const KecamatanPage = lazy(() => import("./pages/Products/Kecamatan"));
-const PerumahanPage = lazy(() => import("./pages/Products/Perumahan"));
-const PublikPage = lazy(() => import("./pages/Products/Publik"));
+const LandingPage = lazy(() => import("./pages/LandingPage"));
 
 const App = () => {
   return (
@@ -28,68 +29,47 @@ const App = () => {
           path="/"
           element={
             <Suspense fallback={false}>
-              <HomeScreen />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/aboutus"
-          element={
-            <Suspense fallback={false}>
-              <AboutUs />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/video"
-          element={
-            <Suspense fallback={false}>
-              <CompanyVideo />
+              <LandingPage />
             </Suspense>
           }
         />
 
         <Route
-          path="/news"
+          path="/tentangkami"
           element={
             <Suspense fallback={false}>
-              <News />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/teams"
-          element={
-            <Suspense fallback={false}>
-              <Teams />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/project"
-          element={
-            <Suspense fallback={false}>
-              <Project />
+              <AboutPage />
             </Suspense>
           }
         />
 
         <Route
-          path="/contact"
+          path="/sipilA"
           element={
             <Suspense fallback={false}>
-              <Contact />
+              <ArsitekSipil />
             </Suspense>
           }
         />
+
         <Route
-          path="/hotel"
+          path="/interiorA"
           element={
             <Suspense fallback={false}>
-              <HotelPage />
+              <ArsitekInterior />
             </Suspense>
           }
         />
+
+        <Route
+          path="/videoperusahaan"
+          element={
+            <Suspense fallback={false}>
+              <VideoPage />
+            </Suspense>
+          }
+        />
+
         <Route
           path="/rumah"
           element={
@@ -98,6 +78,16 @@ const App = () => {
             </Suspense>
           }
         />
+
+        <Route
+          path="/hotel"
+          element={
+            <Suspense fallback={false}>
+              <HotelPage />
+            </Suspense>
+          }
+        />
+
         <Route
           path="/kantor"
           element={
@@ -106,6 +96,7 @@ const App = () => {
             </Suspense>
           }
         />
+
         <Route
           path="/lobby"
           element={
@@ -114,6 +105,7 @@ const App = () => {
             </Suspense>
           }
         />
+
         <Route
           path="/studio"
           element={
@@ -122,38 +114,34 @@ const App = () => {
             </Suspense>
           }
         />
+
         <Route
-          path="/br"
+          path="/kamar"
           element={
             <Suspense fallback={false}>
               <BrPage />
             </Suspense>
           }
         />
+
         <Route
-          path="/coffeemorning"
+          path="/coffee"
           element={
             <Suspense fallback={false}>
               <CoffeePage />
             </Suspense>
           }
         />
+
         <Route
           path="/bedroom"
           element={
             <Suspense fallback={false}>
-              <BedPage />
+              <BedroomPage />
             </Suspense>
           }
         />
-        <Route
-          path="/tamankecamatan"
-          element={
-            <Suspense fallback={false}>
-              <KecamatanPage />
-            </Suspense>
-          }
-        />
+
         <Route
           path="/tamanperumahan"
           element={
@@ -162,11 +150,62 @@ const App = () => {
             </Suspense>
           }
         />
+
+        <Route
+          path="/tamankecamatan"
+          element={
+            <Suspense fallback={false}>
+              <KecamatanPage />
+            </Suspense>
+          }
+        />
+
         <Route
           path="/ruangpublik"
           element={
             <Suspense fallback={false}>
               <PublikPage />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/proyek"
+          element={
+            <Suspense fallback={false}>
+              <ProjectsPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/sipilA"
+          element={
+            <Suspense fallback={false}>
+              <ProjectsPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/interiorA"
+          element={
+            <Suspense fallback={false}>
+              <ProjectsPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/hubungi"
+          element={
+            <Suspense fallback={false}>
+              <ContactPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/berita"
+          element={
+            <Suspense fallback={false}>
+              <NewsPage />
             </Suspense>
           }
         />
