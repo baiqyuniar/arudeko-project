@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/Logo.png";
 import NavbarDrop from "../components/header/NavbarDrop";
+import { useNavigate } from "react-router-dom";
 
 const languages = [
   { value: "", text: "Bahasa" },
@@ -13,6 +14,8 @@ const languages = [
 
 const VideoPage = () => {
   const [open, setOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -46,23 +49,47 @@ const VideoPage = () => {
 
             <ul className="md:flex hidden uppercase items-center gap-8">
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("beranda")}
                 </a>
               </li>
               <NavbarDrop />
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/proyek" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/proyek");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("cek")}
                 </a>
               </li>
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/berita" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/berita");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("berita")}
                 </a>
               </li>
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/hubungi" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hubungi");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("hubungi")}
                 </a>
               </li>
@@ -94,24 +121,45 @@ const VideoPage = () => {
       `}
             >
               <li>
-                <a href="/" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("beranda")}
                 </a>
               </li>
               <NavbarDrop />
               <li>
-                <a href="/proyek" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/proyek");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("cek")}
                 </a>
               </li>
               <li>
-                <a href="/berita" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/berita");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("berita")}
                 </a>
               </li>
               <li>
                 <a
-                  href="/hubungi"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hubungi");
+                  }}
                   className="text-white py-7 px-3 inline-block"
                 >
                   {t("hubungi")}
@@ -138,23 +186,35 @@ const VideoPage = () => {
                   <ul className="flex flex-col space-y-5">
                     <li className="group w-full block py-3 px-4 border-2 border-gray-100 rounded-md overflow-hidden hover:border-indigo-200">
                       <div className="mx-auto w-full max-w-md">
-                        <div className="flex flex-col sm:flex-row items-center sm:space-x-10">
+                        <a
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/tentangkami");
+                          }}
+                          className="flex hover:cursor-pointer flex-col sm:flex-row items-center sm:space-x-10"
+                        >
                           <span className="flex-shrink-0 inline-block w-2 sm:w-4 h-2 sm:h-4 rounded-full bg-gray-600 bg-opacity-20 sm:bg-opacity-100 group-hover:bg-opacity-100" />
                           <p className="text-base text-gray-400 font-bold uppercase">
                             {t("tentang")}
                           </p>
-                        </div>
+                        </a>
                       </div>
                     </li>
 
                     <li className="group w-full block py-3 px-4 border-2 border-gray-100 rounded-md overflow-hidden hover:border-indigo-200">
                       <div className="mx-auto w-full max-w-md">
-                        <div className="flex flex-col sm:flex-row items-center sm:space-x-10">
+                        <a
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/videoperusahaan");
+                          }}
+                          className="flex hover:cursor-pointer flex-col sm:flex-row items-center sm:space-x-10"
+                        >
                           <span className="flex-shrink-0 inline-block w-2 sm:w-4 h-2 sm:h-4 rounded-full bg-gray-600 bg-opacity-20 sm:bg-opacity-100 group-hover:bg-opacity-100" />
                           <p className="text-base text-gray-400 font-bold uppercase">
                             {t("video perusahaan")}
                           </p>
-                        </div>
+                        </a>
                       </div>
                     </li>
                   </ul>

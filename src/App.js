@@ -1,23 +1,27 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ContactPage from "./pages/ContactPage";
-import NewsPage from "./pages/NewsPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import AboutPage from "./pages/AboutPage";
-import VideoPage from "./pages/VideoPage";
-import PublikPage from "./pages/PortfolioPages/PublikPage";
-import RumahPage from "./pages/PortfolioPages/RumahPage";
-import HotelPage from "./pages/PortfolioPages/HotelPage";
-import KantorPage from "./pages/PortfolioPages/KantorPage";
-import LobbyPage from "./pages/PortfolioPages/LobbyPage";
-import StudioPage from "./pages/PortfolioPages/StudioPage";
-import BrPage from "./pages/PortfolioPages/BrPage";
-import CoffeePage from "./pages/PortfolioPages/CoffeePage";
-import BedroomPage from "./pages/PortfolioPages/BedroomPage";
-import PerumahanPage from "./pages/PortfolioPages/PerumahanPage";
-import KecamatanPage from "./pages/PortfolioPages/KecamatanPage";
-import ArsitekSipil from "./pages/profil/ArsitekSipil";
-import ArsitekInterior from "./pages/profil/ArsitekInterior";
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const NewsPage = lazy(() => import("./pages/NewsPage"));
+const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const VideoPage = lazy(() => import("./pages/VideoPage"));
+const PublikPage = lazy(() => import("./pages/PortfolioPages/PublikPage"));
+const RumahPage = lazy(() => import("./pages/PortfolioPages/RumahPage"));
+const HotelPage = lazy(() => import("./pages/PortfolioPages/HotelPage"));
+const KantorPage = lazy(() => import("./pages/PortfolioPages/KantorPage"));
+const LobbyPage = lazy(() => import("./pages/PortfolioPages/LobbyPage"));
+const StudioPage = lazy(() => import("./pages/PortfolioPages/StudioPage"));
+const BrPage = lazy(() => import("./pages/PortfolioPages/BrPage"));
+const CoffeePage = lazy(() => import("./pages/PortfolioPages/CoffeePage"));
+const BedroomPage = lazy(() => import("./pages/PortfolioPages/BedroomPage"));
+const PerumahanPage = lazy(() =>
+  import("./pages/PortfolioPages/PerumahanPage")
+);
+const KecamatanPage = lazy(() =>
+  import("./pages/PortfolioPages/KecamatanPage")
+);
+const ArsitekSipil = lazy(() => import("./pages/profil/ArsitekSipil"));
+const ArsitekInterior = lazy(() => import("./pages/profil/ArsitekInterior"));
 
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 
@@ -171,22 +175,6 @@ const App = () => {
 
         <Route
           path="/proyek"
-          element={
-            <Suspense fallback={false}>
-              <ProjectsPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/sipilA"
-          element={
-            <Suspense fallback={false}>
-              <ProjectsPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/interiorA"
           element={
             <Suspense fallback={false}>
               <ProjectsPage />

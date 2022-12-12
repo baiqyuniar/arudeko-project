@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/Logo.png";
 import NavbarDrop from "../components/header/NavbarDrop";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const languages = [
   { value: "", text: "Bahasa" },
@@ -13,6 +14,8 @@ const languages = [
 
 const NewsPage = () => {
   const [open, setOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
@@ -47,23 +50,47 @@ const NewsPage = () => {
 
             <ul className="md:flex hidden uppercase items-center gap-8">
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("beranda")}
                 </a>
               </li>
               <NavbarDrop />
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/proyek" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/proyek");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("cek")}
                 </a>
               </li>
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/berita" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/berita");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("berita")}
                 </a>
               </li>
               <li className="hover:bg-slate-600 hover:rounded-lg">
-                <a href="/hubungi" className="text-white py-4 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hubungi");
+                  }}
+                  className="text-white py-4 inline-block"
+                >
                   {t("hubungi")}
                 </a>
               </li>
@@ -95,24 +122,45 @@ const NewsPage = () => {
       `}
             >
               <li>
-                <a href="/" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("beranda")}
                 </a>
               </li>
               <NavbarDrop />
               <li>
-                <a href="/proyek" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/proyek");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("cek")}
                 </a>
               </li>
               <li>
-                <a href="/berita" className="text-white py-7 px-3 inline-block">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/berita");
+                  }}
+                  className="text-white py-7 px-3 inline-block"
+                >
                   {t("berita")}
                 </a>
               </li>
               <li>
                 <a
-                  href="/hubungi"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hubungi");
+                  }}
                   className="text-white py-7 px-3 inline-block"
                 >
                   {t("hubungi")}
