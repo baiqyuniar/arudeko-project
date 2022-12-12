@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import images from "./imageSlider";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const props = {
@@ -10,13 +11,15 @@ const Hero = () => {
     infinite: true,
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto mt-24 flex flex-col">
       <div className="flex flex-col items-center justify-around w-full lg:flex-row">
         <div className="mb-8 lg:mb-0 lg:max-w-lg">
           <div className="max-w-xl mb-6">
             <h2 className="font-sans text-center text-base font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none max-w-lg mb-6">
-              PT ABUIDAYA RAYA UTAMA
+              PT ABIUDAYA RAYA UTAMA
             </h2>
             <img
               className="object-cover mx-auto w-auto h-64 shadow-xl rounded-md lg:h-96 "
@@ -46,7 +49,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Products
+              {t("produk")}
             </h1>
             <div className="w-16 h-16 mx-auto">
               <svg
@@ -67,7 +70,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Profil Arsitek
+              {t("profil")}
             </a>
             <div className="w-16 h-16 mx-auto">
               <svg
@@ -88,7 +91,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Projects
+              {t("proyek")}
             </a>
             <div className="w-16 h-16 mx-auto">
               <svg
@@ -109,7 +112,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Titip Kelola Apartemen
+              {t("apartemen")}
             </a>
             <div className="w-16 h-16 mx-auto">
               <svg
@@ -130,7 +133,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Video
+              {t("video")}
             </a>
             <div className="w-16 h-16 mx-auto">
               <svg
@@ -151,7 +154,7 @@ const Hero = () => {
               href="/"
               className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
             >
-              Pemesanan & Konsultasi
+              {t("pesan")}
             </a>
             <div className="w-16 h-16 mx-auto">
               <svg

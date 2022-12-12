@@ -1,28 +1,29 @@
 import React, { useState } from "react";
 import { links } from "./navLinks";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 const NavbarDrop = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
+
+  const { t } = useTranslation();
 
   return (
     <>
       {links.map((link) => (
         <div>
           <div className="hover:bg-slate-600 hover:rounded-lg text-left md:cursor-pointer group">
-            <h1
-              className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group"
-              onClick={() => {
-                heading !== link.name ? setHeading(link.name) : setHeading("");
-                setSubHeading("");
-              }}
-            >
-              {link.name}
+            <h1 className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group">
+              {t(link.name)}
               <span className="text-xl text-white md:hidden inline">
                 <AiOutlineUp
                   className={`${
-                    heading === link.name ? <AiOutlineUp /> : <AiOutlineDown />
+                    heading === t(link.name) ? (
+                      <AiOutlineUp />
+                    ) : (
+                      <AiOutlineDown />
+                    )
                   }`}
                 />
               </span>
@@ -43,11 +44,12 @@ const NavbarDrop = () => {
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg text-center font-semibold">
-                          {mysublinks.Head}
+                          {/* {mysublinks.Head} */}
+                          {t(mysublinks.Head)}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
                           <li className="text-sm text-white my-8 p-2 rounded-xl hover:bg-slate-600">
-                            <a href={slink.link}>{slink.name}</a>
+                            <a href={slink.link}>{t(slink.name)}</a>
                           </li>
                         ))}
                       </div>

@@ -27,15 +27,15 @@ export const links = [
       {
         Head: "Interior",
         sublink: [
-          { name: "Lobby Apartment", link: "/lobby" },
+          { name: "Lobi Apartemen", link: "/lobby" },
           { name: "Kamar Type Studio", link: "/studio" },
           { name: "Kamar Type 1 BR", link: "/kamar" },
           { name: "Coffee Morning", link: "/coffee" },
-          { name: "Bedroom", link: "/bedroom" },
+          { name: "Kamar Tidur", link: "/bedroom" },
         ],
       },
       {
-        Head: "Landscape",
+        Head: "Landskap",
         sublink: [
           { name: "Taman Perumahan", link: "/tamanperumahan" },
           { name: "Taman Kecamatan", link: "/tamankecamatan" },
@@ -59,7 +59,7 @@ export const links = [
         Head: "",
         sublink: [
           { name: "Pekerjaan Interior Rumah", link: "/" },
-          { name: "Pekerjaan Interior Office", link: "/" },
+          { name: "Pekerjaan Interior Kantor", link: "/" },
           { name: "Pekerjaan Interior Apartemen", link: "/" },
           { name: "Pekerjaan Interior Tempat Usaha", link: "/" },
         ],

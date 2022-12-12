@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import hotelList from "../PortfolioList/hotelList";
+import { useTranslation } from "react-i18next";
 
 const Hotel = () => {
   const [mainPicture, setMainPicture] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <div>
       <div className="mx-auto lg:mt-12 px-4 w-full max-w-7xl bg-white text-gray-700">
         <h1 className="text-3xl lg:text-4xl font-bold text-center tracking-widest uppercase my-4">
-          Our Portfolio
+          {t("Portofolio Kami")}
         </h1>
         <div className="flex flex-col lg:flex-row">
           <div className="py-8 w-full lg:mt-12 flex flex-col items-center">
@@ -51,7 +53,7 @@ const Hotel = () => {
         <div className="lg:py-8 w-full flex flex-col items-center justify-center ">
           <div className="order-3 lg:order-1 pb-5 sm:px-6">
             <h1 className="hidden lg:block text-4xl text-gray-700 font-bold text-center tracking-wide">
-              {hotelList.name}
+              {t(hotelList.name)}
             </h1>
             <p className="mt-10 text-xl text-gray-500">
               {hotelList.description}
