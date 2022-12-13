@@ -185,7 +185,13 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="px-4 py-8  bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/hubungi");
+            }}
+            className="px-4 py-8  bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
             <div className="w-16 h-16 mx-auto mt-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

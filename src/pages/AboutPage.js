@@ -3,7 +3,7 @@ import Footer from "../components/footer/Footer";
 import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/Logo.png";
 import NavbarDrop from "../components/header/NavbarDrop";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const languages = [
@@ -60,7 +60,9 @@ const AboutPage = () => {
                   {t("beranda")}
                 </a>
               </li>
+
               <NavbarDrop />
+
               <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
@@ -72,7 +74,7 @@ const AboutPage = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
+              {/* <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -82,7 +84,7 @@ const AboutPage = () => {
                 >
                   {t("berita")}
                 </a>
-              </li>
+              </li> */}
               <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {

@@ -74,7 +74,7 @@ const KecamatanPage = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
+              {/* <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -84,7 +84,7 @@ const KecamatanPage = () => {
                 >
                   {t("berita")}
                 </a>
-              </li>
+              </li> */}
               <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {

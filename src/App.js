@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Apartemen from "./pages/Apartemen";
 const ContactPage = lazy(() => import("./pages/ContactPage"));
-const NewsPage = lazy(() => import("./pages/NewsPage"));
+// const NewsPage = lazy(() => import("./pages/NewsPage"));
 const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const VideoPage = lazy(() => import("./pages/VideoPage"));
@@ -199,14 +199,14 @@ const App = () => {
             </Suspense>
           }
         />
-        <Route
+        {/* <Route
           path="/berita"
           element={
             <Suspense fallback={false}>
               <NewsPage />
             </Suspense>
           }
-        />
+        /> */}
       </Routes>
     </BrowserRouter>
   );

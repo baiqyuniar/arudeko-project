@@ -72,7 +72,7 @@ const Apartemen = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              {/* <li className="hover:bg-slate-600 hover:rounded-lg">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -82,7 +82,7 @@ const Apartemen = () => {
                 >
                   {t("berita")}
                 </a>
-              </li>
+              </li> */}
               <li className="hover:bg-slate-600 hover:rounded-lg">
                 <a
                   onClick={(e) => {
