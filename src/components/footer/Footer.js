@@ -1,8 +1,11 @@
+import { t } from "i18next";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <footer className="font-poppins bg-footer text-black">
@@ -99,129 +102,200 @@ const Footer = () => {
 
           <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3 text-black">
             <div>
-              <p className="font-bold">Company Overview</p>
+              <p className="font-bold">{t("Informasi Perusahaan")}</p>
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
                 <a
-                  onClick={() => navigate("/aboutus")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/tentangkami");
+                  }}
                   className="hover:opacity-75 hover:cursor-pointer"
                   href
                 >
-                  Vision & Mission
-                </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href>
-                  Company History
+                  {t("Visi & Misi")}
                 </a>
                 <a
-                  onClick={() => navigate("/video")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/videoperusahaan");
+                  }}
                   className="hover:opacity-75 hover:cursor-pointer"
                   href
                 >
-                  Company Video
+                  {t("Video Perusahaan")}
                 </a>
               </nav>
             </div>
 
             <div>
-              <p className="font-bold">Popular Articles</p>
+              <p className="font-bold">{t("Profil Arsitek")}</p>
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Article 1
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/sipilA");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Profil Arsitek Sipil")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Article 2
-                </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Article 3
-                </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Article 4
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/interiorA");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Profil Arsitek Interior")}
                 </a>
               </nav>
             </div>
 
             <div>
-              <p className="font-bold">More Information</p>
+              <p className="font-bold">{t("Informasi Selengkapnya")}</p>
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
                 <a
-                  onClick={() => navigate("/project")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/proyek");
+                  }}
                   className="hover:opacity-75 hover:cursor-pointer"
-                  href="/"
                 >
-                  Projects
+                  {t("proyek")}
                 </a>
                 <a
-                  onClick={() => navigate("/teams")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/apartement");
+                  }}
                   className="hover:opacity-75 hover:cursor-pointer"
-                  href="/"
                 >
-                  Team
-                </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Careers
-                </a>
-                <a
-                  onClick={() => navigate("/news")}
-                  className="hover:opacity-75 hover:cursor-pointer"
-                  href="/"
-                >
-                  News &amp; Events
+                  {t("apartemen")}
                 </a>
               </nav>
             </div>
 
             <div>
-              <p className="font-bold">Contact Info</p>
+              <p className="font-bold">{t("Informasi Kontak")}</p>
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
                 <a
-                  onClick={() => navigate("/contact")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hubungi");
+                  }}
                   className="hover:opacity-75 hover:cursor-pointer"
-                  href="/"
                 >
-                  Contact Us
+                  {t("hubungi")}
                 </a>
               </nav>
             </div>
 
             <div>
-              <p className="font-bold">Products</p>
+              <p className="font-bold">{t("Portfolio")}</p>
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Arsitektur Hotel
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/hotel");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Arsitektur Hotel")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Arsitektur Rumah
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/rumah");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Arsitektur Rumah")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Arsitektur Kantor
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/kantor");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Arsitektur Kantor")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Interior Lobby Apartment
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/lobby");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Interior Lobby Apartment")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Interior Kamar Type Studio
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/studio");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Interior Kamar Type Studio")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Interior Kamar Type 1 BR
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/kamar");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Interior Kamar Type 1 BR")}
                 </a>
               </nav>
             </div>
 
             <div>
               <nav className="flex flex-col mt-10 space-y-2 text-sm">
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/coffee");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
                   Interior Coffee Morning
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Interior Bedroom
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/bedroom");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Interior Kamar Tidur")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Landscape Taman Kecamatan
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/tamankecamatan");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Landskap Taman Kecamatan")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Landscape Taman Perumahan
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/tamanperumahan");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Landskap Taman Perumahan")}
                 </a>
-                <a className="hover:opacity-75 hover:cursor-pointer" href="/">
-                  Landscape Ruang Publik
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/ruangpublik");
+                  }}
+                  className="hover:opacity-75 hover:cursor-pointer"
+                >
+                  {t("Landskap Ruang Publik")}
                 </a>
               </nav>
             </div>
