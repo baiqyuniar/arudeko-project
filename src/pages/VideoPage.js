@@ -48,7 +48,7 @@ const VideoPage = () => {
             </div>
 
             <ul className="md:flex hidden uppercase items-center gap-8">
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:cursor-pointer px-2 hover:rounded-lg">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -60,7 +60,7 @@ const VideoPage = () => {
                 </a>
               </li>
               <NavbarDrop />
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -71,7 +71,7 @@ const VideoPage = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -82,7 +82,7 @@ const VideoPage = () => {
                   {t("berita")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -177,8 +177,7 @@ const VideoPage = () => {
               <div className="flex flex-col items-center">
                 <div className="max-w-2xl text-center mt-2">
                   <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide">
-                    <span className="text-slate-500">About </span>
-                    <span className="text-gray-700">Us</span>
+                    {t("tentang")}
                   </h2>
                 </div>
 

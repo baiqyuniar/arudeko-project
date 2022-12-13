@@ -50,7 +50,7 @@ const PerumahanPage = () => {
             </div>
 
             <ul className="md:flex hidden uppercase items-center gap-8">
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:cursor-pointer px-2 hover:rounded-lg">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -62,7 +62,7 @@ const PerumahanPage = () => {
                 </a>
               </li>
               <NavbarDrop />
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -73,7 +73,7 @@ const PerumahanPage = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -84,7 +84,7 @@ const PerumahanPage = () => {
                   {t("berita")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();

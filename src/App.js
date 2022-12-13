@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Apartemen from "./pages/Apartemen";
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const NewsPage = lazy(() => import("./pages/NewsPage"));
 const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
@@ -142,6 +143,15 @@ const App = () => {
           element={
             <Suspense fallback={false}>
               <BedroomPage />
+            </Suspense>
+          }
+        />
+
+        <Route
+          path="/apartement"
+          element={
+            <Suspense fallback={false}>
+              <Apartemen />
             </Suspense>
           }
         />

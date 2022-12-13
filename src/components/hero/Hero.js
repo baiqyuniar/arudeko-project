@@ -2,6 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import images from "./imageSlider";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const props = {
@@ -12,6 +13,8 @@ const Hero = () => {
   };
 
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
 
   return (
     <div className="container mx-auto mt-24 flex flex-col">
@@ -44,13 +47,16 @@ const Hero = () => {
 
       <div className="py-4 w-full lg:py-12">
         <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-7 sm:max-w-sm sm:mx-auto lg:max-w-full">
-          <div className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <h1
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/produk");
+            }}
+            className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("produk")}
-            </h1>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 clipRule="evenodd"
@@ -65,13 +71,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <a
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/sipilA");
+            }}
+            className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("profil")}
-            </a>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 clip-rule="evenodd"
@@ -86,13 +95,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <a
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/proyek");
+            }}
+            className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("proyek")}
-            </a>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 clip-rule="evenodd"
@@ -107,13 +119,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="px-8 py-4 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <a
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/apartement");
+            }}
+            className="px-8 py-4 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("apartemen")}
-            </a>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 clip-rule="evenodd"
@@ -128,13 +143,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <a
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+          <div
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/videoperusahaan");
+            }}
+            className="px-4 py-8 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm"
+          >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("video")}
-            </a>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 clip-rule="evenodd"
@@ -150,12 +168,9 @@ const Hero = () => {
           </div>
 
           <div className="px-8 py-4 bg-gray-400 rounded-md opacity-80 hover:bg-slate-400 hover:cursor-pointer border rounded shadow-sm">
-            <a
-              href="/"
-              className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200"
-            >
+            <p className="inline-block mb-3 flex items-center justify-center text-center text-base font-bold leading-5 text-black transition-colors duration-200">
               {t("pesan")}
-            </a>
+            </p>
             <div className="w-16 h-16 mx-auto">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

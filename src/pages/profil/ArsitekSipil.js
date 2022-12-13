@@ -132,7 +132,7 @@ const ProfilArsitek = () => {
                 Nama Arsitek Sipil A
               </h2>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Tarif
+                {t("Tarif")}
               </p>
               <div>
                 <img
@@ -173,7 +173,7 @@ const ProfilArsitek = () => {
                 <div className="relative mx-auto max-w-3xl flex flex-col items-center">
                   <div className="text-center space-y-2">
                     <h2 className="text-2xl font-semibold tracking-wider">
-                      Hubungi Arsitek
+                      {t("Hubungi Arsitek")}
                     </h2>
                   </div>
 
@@ -197,40 +197,40 @@ const ProfilArsitek = () => {
 
                       <div className="col-span-full sm:col-span-1">
                         <label htmlFor="name" className="sr-only">
-                          Name
+                          {t("Nama")}
                         </label>
                         <input
                           type="text"
                           id="name"
                           name="name"
-                          placeholder="Nama"
+                          placeholder={t("Nama")}
                           className="form-input w-full h-12 px-2 border block shadow-sm rounded border-gray-200 bg-gray-50 bg-opacity-90 text-base placeholder-gray-300 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
                         />
                       </div>
 
                       <div className="col-span-full sm:col-span-1">
                         <label htmlFor="phone" className="sr-only">
-                          Phone
+                          {t("Telepon")}
                         </label>
                         <input
                           type="text"
                           id="phone"
                           name="phone"
-                          placeholder="Nomor Telepon"
+                          placeholder={t("Telepon")}
                           className="form-input w-full h-12 px-2 border block shadow-sm rounded border-gray-200 bg-gray-50 bg-opacity-90 text-base placeholder-gray-300 focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
                         />
                       </div>
 
                       <div className="col-span-full">
                         <label htmlFor="message" className="sr-only">
-                          Message
+                          {t("Pesan")}
                         </label>
                         <textarea
                           name="message"
                           id="message"
                           cols="30"
                           rows="6"
-                          placeholder="Pesan"
+                          placeholder={t("Pesan")}
                           className="form-textarea border px-2 resize-none w-full shadow-sm rounded border-gray-200 bg-gray-50 bg-opacity-90 placeholder-gray-300 focus:border-rose-500 focus:ring-rose-500"
                         ></textarea>
                       </div>
@@ -238,9 +238,9 @@ const ProfilArsitek = () => {
                       <div className="col-span-full py-2 mx-auto">
                         <button
                           type="submit"
-                          className="py-1.5 px-6 w-full sm:w-40 shadow-xl rounded bg-gradient-to-br from-gray-600 to-slate-500 text-lg text-white hover:to-gray-700"
+                          className="py-1.5 px-6 uppercase w-full sm:w-40 shadow-xl rounded bg-gradient-to-br from-gray-600 to-slate-500 text-lg text-white hover:to-gray-700"
                         >
-                          KIRIM
+                          {t("Kirim")}
                         </button>
                       </div>
                     </form>

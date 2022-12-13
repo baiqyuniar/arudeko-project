@@ -37,7 +37,7 @@ const LandingPage = () => {
               <img
                 src={Logo}
                 alt="logo"
-                className="md:w-32 md:h-16 md:cursor-pointer w-32 h-16"
+                className="md:w-32 md:h-16 md:cursor-pointer hidden lg:flex w-32 h-16"
               />
               <div
                 className="text-3xl md:hidden right-0"
@@ -50,7 +50,7 @@ const LandingPage = () => {
             </div>
 
             <ul className="md:flex hidden uppercase items-center gap-8">
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:cursor-pointer px-2 hover:rounded-lg">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -62,7 +62,7 @@ const LandingPage = () => {
                 </a>
               </li>
               <NavbarDrop />
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -73,7 +73,7 @@ const LandingPage = () => {
                   {t("cek")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
@@ -84,7 +84,7 @@ const LandingPage = () => {
                   {t("berita")}
                 </a>
               </li>
-              <li className="hover:bg-slate-600 hover:rounded-lg">
+              <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
                 <a
                   onClick={(e) => {
                     e.preventDefault();
