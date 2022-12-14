@@ -543,7 +543,7 @@ const BrPage = () => {
                   >
                     <span className="flex-shrink-0 inline-block w-2 sm:w-4 h-2 sm:h-4 rounded-full bg-gray-600 bg-opacity-20 sm:bg-opacity-100 group-hover:bg-opacity-100" />
                     <p className="text-base text-gray-400 font-bold uppercase">
-                      {t("Landskap Taman Perumahan")}
+                      {t("Landskap Taman Kecamatan")}
                     </p>
                   </a>
                 </div>
