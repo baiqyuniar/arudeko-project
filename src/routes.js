@@ -1,4 +1,5 @@
 import React, { lazy } from "react";
+import Login from "./components/Login";
 const Apartemen = lazy(() => import("./pages/Apartemen"));
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const HotelPage = lazy(() => import("./pages/PortfolioPages/HotelPage"));
@@ -45,6 +46,7 @@ const routes = [
   { path: "/hubungi", name: "Contact", element: ContactPage },
   { path: "/apartement", name: "Apartement", element: Apartemen },
   { path: "/adminNews", name: "AdminNews", element: AdminNews },
+  { path: "/login", name: "Login", element: Login },
 ];
 
 export default routes;

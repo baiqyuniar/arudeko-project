@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const languages = [
-  { value: "", text: "Option", disabled: true },
+  { value: "", text: "Pilihan", disabled: true },
   { value: "id", text: "Indonesia" },
   { value: "en", text: "English" },
 ];
@@ -203,7 +203,7 @@ const Navbar = () => {
                 key={item.value}
                 value={item.value}
               >
-                {item.text}
+                {t(item.text)}
               </option>
             );
           })}

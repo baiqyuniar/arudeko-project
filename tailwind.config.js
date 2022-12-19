@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: {
         footer: "url('./assets/Footer1.jpg')",
         split: "linear-gradient(to bottom, #DFDFDE 50% , #F7F5F2 50%);",
+        login: "url('./assets/hero11.png')",
       },
     },
   },
