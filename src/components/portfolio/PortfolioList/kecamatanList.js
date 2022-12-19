@@ -5,19 +5,19 @@ const kecamatanList = {
   pictures: [
     {
       src: require("../../../assets/kecamatan1.png"),
-      alt: "Landscape Taman Kecamatan 1",
+      alt: "Landskap Taman Kecamatan 1",
     },
     {
       src: require("../../../assets/kecamatan2.png"),
-      alt: "Landscape Taman Kecamatan 2",
+      alt: "Landskap Taman Kecamatan 2",
     },
     {
       src: require("../../../assets/kecamatan3.png"),
-      alt: "Landscape Taman Kecamatan 3",
+      alt: "Landskap Taman Kecamatan 3",
     },
     {
       src: require("../../../assets/kecamatan4.png"),
-      alt: "Landscape Taman Kecamatan 4",
+      alt: "Landskap Taman Kecamatan 4",
     },
   ],
 };

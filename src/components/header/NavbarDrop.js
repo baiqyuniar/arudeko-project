@@ -1,29 +1,30 @@
 import React, { useState } from "react";
-import { links } from "./navLinks";
-import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
+import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import navLink from "./navLinks";
 
 const NavbarDrop = () => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
-
   const { t } = useTranslation();
 
   return (
     <>
-      {links.map((link) => (
+      {navLink.map((link) => (
         <div>
           <div className="hover:bg-slate-600 hover:rounded-lg text-left md:cursor-pointer group">
-            <h1 className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group">
-              {t(link.name)}
+            <h1
+              className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group"
+              onClick={() => {
+                heading !== link.name ? setHeading(link.name) : setHeading("");
+                setSubHeading("");
+              }}
+            >
+              {link.name}
               <span className="text-xl text-white md:hidden inline">
                 <AiOutlineUp
                   className={`${
-                    heading === t(link.name) ? (
-                      <AiOutlineUp />
-                    ) : (
-                      <AiOutlineDown />
-                    )
+                    heading === link.name ? <AiOutlineUp /> : <AiOutlineDown />
                   }`}
                 />
               </span>
@@ -44,7 +45,6 @@ const NavbarDrop = () => {
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg text-center font-semibold">
-                          {/* {mysublinks.Head} */}
                           {t(mysublinks.Head)}
                         </h1>
                         {mysublinks.sublink.map((slink) => (

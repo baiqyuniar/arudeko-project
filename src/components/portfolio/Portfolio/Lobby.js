@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import lobbyList from "../PortfolioList/lobbyList";
 import { useTranslation } from "react-i18next";
+import lobbyList from "../PortfolioList/lobbyList";
 
 const Lobby = () => {
   const [mainPicture, setMainPicture] = useState(0);

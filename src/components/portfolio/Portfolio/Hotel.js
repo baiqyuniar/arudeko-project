@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import hotelList from "../PortfolioList/hotelList";
 import { useTranslation } from "react-i18next";
+import hotelList from "../PortfolioList/hotelList";
 
 const Hotel = () => {
   const [mainPicture, setMainPicture] = useState(0);

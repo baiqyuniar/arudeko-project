@@ -1,6 +1,7 @@
+import { t } from "i18next";
 import React, { useState } from "react";
-import bedList from "../PortfolioList/bedList";
 import { useTranslation } from "react-i18next";
+import bedList from "../PortfolioList/bedList";
 
 const Bed = () => {
   const [mainPicture, setMainPicture] = useState(0);

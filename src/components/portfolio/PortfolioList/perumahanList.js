@@ -5,19 +5,19 @@ const perumahanList = {
   pictures: [
     {
       src: require("../../../assets/perumahan1.png"),
-      alt: "Landscape Taman Perumahan 1",
+      alt: "Landskap Taman Perumahan 1",
     },
     {
       src: require("../../../assets/perumahan2.png"),
-      alt: "Landscape Taman Perumahan 2",
+      alt: "Landskap Taman Perumahan 2",
     },
     {
       src: require("../../../assets/perumahan3.png"),
-      alt: "Landscape Taman Perumahan 3",
+      alt: "Landskap Taman Perumahan 3",
     },
     {
       src: require("../../../assets/perumahan4.png"),
-      alt: "Landscape Taman Perumahan 4",
+      alt: "Landskap Taman Perumahan 4",
     },
   ],
 };

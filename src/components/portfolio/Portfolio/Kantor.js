@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import kantorList from "../PortfolioList/kantorList";
 import { useTranslation } from "react-i18next";
+import kantorList from "../PortfolioList/kantorList";
 
 const Kantor = () => {
   const [mainPicture, setMainPicture] = useState(0);

@@ -1,11 +1,33 @@
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 import Logo from "../../assets/Logo.png";
-import NavbarDrop from "./NavbarDrop";
+import navLink from "./navLinks";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+
+const languages = [
+  { value: "", text: "Option", disabled: true },
+  { value: "id", text: "Indonesia" },
+  { value: "en", text: "English" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [state, setState] = useState(false);
+
+  const navigate = useNavigate();
+
+  const [heading, setHeading] = useState("");
+  const [subHeading, setSubHeading] = useState("");
+
+  const { t } = useTranslation();
+
+  const [lang, setLang] = useState("null");
+
+  const handleChange = (e) => {
+    setLang(e.target.value);
+    let loc = window.location.pathname;
+    window.location.replace(loc + "?lng=" + e.target.value);
+  };
   return (
     <nav className="bg-gray-400 absolute z-50 px-4 mx-auto w-full md:px-24 lg:px-0">
       <div className="container mx-auto flex items-center font-medium justify-between">
@@ -16,78 +38,176 @@ const Navbar = () => {
             className="md:w-32 md:h-16 md:cursor-pointer w-32 h-16"
           />
           <div
-            className="text-3xl md:hidden right-0"
+            className="text-3xl lg:hidden right-0 flex items-center justify-center"
             onClick={() => setOpen(!open)}
           >
             <AiOutlineMenu name={`${open ? "close" : "menu"}`}></AiOutlineMenu>
           </div>
         </div>
 
-        <ul className="md:flex hidden uppercase items-center gap-8">
-          <li className="hover:bg-slate-600 hover:rounded-lg">
-            <a href="/" className="text-white py-4 px-3 inline-block">
-              Home
+        <ul className="lg:flex hidden uppercase items-center gap-8">
+          <li className="hover:bg-slate-600 hover:cursor-pointer lg:px-2 hover:rounded-lg">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/");
+              }}
+              className="text-white py-4 inline-block"
+            >
+              {t("beranda")}
             </a>
           </li>
-          <NavbarDrop />
-          <li className="hover:bg-slate-600 hover:rounded-lg">
-            <a href="/projects" className="text-white py-4 px-3 inline-block">
-              Cek Update Project
+          <>
+            {navLink.map((link) => (
+              <div className="px-2">
+                <div className="hover:bg-slate-600 hover:rounded-lg text-left md:cursor-pointer group">
+                  <h1 className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group">
+                    {t(link.name)}
+                    <span className="text-xl text-white md:hidden inline">
+                      <AiOutlineUp
+                        className={`${
+                          heading === t(link.name) ? (
+                            <AiOutlineUp />
+                          ) : (
+                            <AiOutlineDown />
+                          )
+                        }`}
+                      />
+                    </span>
+                    <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
+                      <AiOutlineDown />
+                    </span>
+                  </h1>
+                  {link.submenu && (
+                    <div className="opacity-[0.89] ">
+                      <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+                        <div className="py-3">
+                          <div
+                            className="w-4 h-4 left-3 absolute 
+                    mt-1 bg-gray-400 rotate-45"
+                          ></div>
+                        </div>
+                        <div className="bg-gray-400 p-8 grid grid-cols-3 gap-10 lg:w-auto">
+                          {link.sublinks.map((mysublinks) => (
+                            <div>
+                              <h1 className="text-lg text-center font-semibold">
+                                {/* {mysublinks.Head} */}
+                                {t(mysublinks.Head)}
+                              </h1>
+                              {mysublinks.sublink.map((slink) => (
+                                <li className="text-sm text-white my-8 p-2 rounded-xl hover:bg-slate-600">
+                                  <a href={slink.link}>{t(slink.name)}</a>
+                                </li>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {/* Mobile menus */}
+                <div
+                  className={`
+            ${heading === link.name ? "lg:block" : "hidden"}
+          `}
+                >
+                  {/* sublinks */}
+                  {link.sublinks.map((slinks) => (
+                    <div>
+                      <div>
+                        <h1
+                          onClick={() =>
+                            subHeading !== slinks.Head
+                              ? setSubHeading(slinks.Head)
+                              : setSubHeading("")
+                          }
+                          className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                        >
+                          {slinks.Head}
+
+                          <span className="text-xl md:mt-1 md:ml-2 inline">
+                            <ion-icon
+                              name={`${
+                                subHeading === slinks.Head ? (
+                                  <AiOutlineUp />
+                                ) : (
+                                  <AiOutlineDown />
+                                )
+                              }`}
+                            ></ion-icon>
+                          </span>
+                        </h1>
+                        <div
+                          className={`${
+                            subHeading === slinks.Head ? "md:hidden" : "hidden"
+                          }`}
+                        >
+                          {slinks.sublink.map((slink) => (
+                            <li className="py-3 pl-14">
+                              <a href={slink.link}>{slink.name}</a>
+                            </li>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </>
+          <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/proyek");
+              }}
+              className="text-white py-4 inline-block"
+            >
+              {t("cek")}
             </a>
           </li>
-          <li className="hover:bg-slate-600 hover:rounded-lg">
-            <a href="/news" className="text-white py-4 px-3 inline-block">
-              News
+          {/* <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/berita");
+              }}
+              className="text-white py-4 inline-block"
+            >
+              {t("berita")}
             </a>
-          </li>
-          <li className="hover:bg-slate-600 hover:rounded-lg">
-            <a href="/contact" className="text-white  py-4 px-3 inline-block">
-              Contact
+          </li> */}
+          <li className="hover:bg-slate-600 hover:rounded-lg hover:cursor-pointer px-2">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/hubungi");
+              }}
+              className="text-white py-4 inline-block"
+            >
+              {t("hubungi")}
             </a>
           </li>
         </ul>
 
-        <div className="lg:flex lg:gap-1 lg:block hidden">
-          <button
-            className="rounded-md active:outline-none focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white ml-2"
-            onClick={() => setState(!state)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-12 rounded-md text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-
-            <ul
-              className={`bg-gray-400 top-12 mt-5 lg:absolute lg:text-sm w-auto lg:mt-8 lg:shadow-md lg:space-y-0 ${
-                state ? "" : "hidden"
-              }`}
-            >
-              <li className="bg-gray-400">
-                <a className="block gap-2 flex text-white hover:bg-slate-600 lg:p-2.5">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABQUlEQVRoge3WsUrDUBTG8X80qC1CCLg5uHSwQzfBxaGLiKPiW/gCdezQ1UfwCRQndRAXBQmCiw7dhFIIFdGESMUIGqcEoyK03ptw4fym3OXmfpyccwNCCCGEKI8FkCSJ1dw8/lC9+VHUVr1lZvbsygKY0PaGguQCVCs2G+sLY68bdZdG3dV53h/s9GF6apLd9jKLNYenMMa7fhhpfdd7prOzBMB265K+P+R1/1TfyV0nHyB+e+fcG+Dfv3DTDUZeB2HMhTcAoO8P9R38G61NfLC3onrLzJzrWPClAqlqxWatOc/hSW+sddoDt92Ama1VbQFSuQCq+4BI+/nzAUzsA+N7QO6Bv+6BQgPo+P6LmELyM1e2rAKPYaS8Ajr9OoVMZHyAbAoVMTF0ML4CxgeQKVQ24wPIFCqb8QGEEEIIIf7hEycURuUfhn7yAAAAAElFTkSuQmCC" />
-                  <p className="flex justify-center items-center">English</p>
-                </a>
-              </li>
-              ;
-              <li className="bg-gray-400">
-                <a className="block gap-2 flex text-white hover:bg-slate-600 lg:p-2.5">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRoge3WsQmAQBBE0TsbEMF2rN52BLECDURzuWA8eC/acH82pQBAx+pznEs5k498Vdf79yH9SCsBaQLSBKQJSBOQJiCt+4B3Tm/70dWcnqfRnP4FAWkC0gSkCUgTkCYAAGhwAfKcBzv0ZMG+AAAAAElFTkSuQmCC" />
-                  <p className="flex justify-center items-center">Indonesia</p>
-                </a>
-              </li>
-            </ul>
-          </button>
-        </div>
+        <select
+          value={lang}
+          onChange={handleChange}
+          className="bg-transparent text-white text-base mb-[3px] uppercase rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-2.5"
+        >
+          {languages.map((item) => {
+            return (
+              <option
+                className="text-white bg-gray-400 border border-gray-300 mb-6 text-sm rounded-lgblock p-2.5 "
+                key={item.value}
+                value={item.value}
+              >
+                {item.text}
+              </option>
+            );
+          })}
+        </select>
 
         {/* Mobile nav */}
         <ul
@@ -97,29 +217,146 @@ const Navbar = () => {
       `}
         >
           <li>
-            <a href="/" className="text-white py-7 px-3 inline-block">
-              Home
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/");
+              }}
+              className="text-white py-7 px-3 inline-block"
+            >
+              {t("beranda")}
             </a>
           </li>
-          <NavbarDrop />
+          <>
+            {navLink.map((link) => (
+              <div>
+                <div className="hover:bg-slate-600 hover:rounded-lg text-left md:cursor-pointer group">
+                  <h1 className="py-4 flex justify-between text-white items-center md:pr-0 pr-3 group">
+                    {t(link.name)}
+                    <span className="text-xl text-white md:hidden inline">
+                      <AiOutlineUp
+                        className={`${
+                          heading === t(link.name) ? (
+                            <AiOutlineUp />
+                          ) : (
+                            <AiOutlineDown />
+                          )
+                        }`}
+                      />
+                    </span>
+                    <span className="text-xl md:mt-1 md:ml-2  md:block hidden group-hover:rotate-180 group-hover:-mt-2">
+                      <AiOutlineDown />
+                    </span>
+                  </h1>
+                  {link.submenu && (
+                    <div className="opacity-[0.89]">
+                      <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
+                        <div className="py-3">
+                          <div
+                            className="w-4 h-4 left-3 absolute 
+                    mt-1 bg-gray-400 rotate-45"
+                          ></div>
+                        </div>
+                        <div className="bg-gray-400 p-8 grid grid-cols-3 gap-10 lg:w-auto">
+                          {link.sublinks.map((mysublinks) => (
+                            <div>
+                              <h1 className="text-lg text-center font-semibold">
+                                {/* {mysublinks.Head} */}
+                                {t(mysublinks.Head)}
+                              </h1>
+                              {mysublinks.sublink.map((slink) => (
+                                <li className="text-sm text-white my-8 p-2 rounded-xl hover:bg-slate-600">
+                                  <a href={slink.link}>{t(slink.name)}</a>
+                                </li>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {/* Mobile menus */}
+                <div
+                  className={`
+            ${heading === link.name ? "md:block" : "hidden"}
+          `}
+                >
+                  {/* sublinks */}
+                  {link.sublinks.map((slinks) => (
+                    <div>
+                      <div>
+                        <h1
+                          onClick={() =>
+                            subHeading !== slinks.Head
+                              ? setSubHeading(slinks.Head)
+                              : setSubHeading("")
+                          }
+                          className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center md:pr-0 pr-5"
+                        >
+                          {slinks.Head}
+
+                          <span className="text-xl md:mt-1 md:ml-2 inline">
+                            <ion-icon
+                              name={`${
+                                subHeading === slinks.Head ? (
+                                  <AiOutlineUp />
+                                ) : (
+                                  <AiOutlineDown />
+                                )
+                              }`}
+                            ></ion-icon>
+                          </span>
+                        </h1>
+                        <div
+                          className={`${
+                            subHeading === slinks.Head ? "md:hidden" : "hidden"
+                          }`}
+                        >
+                          {slinks.sublink.map((slink) => (
+                            <li className="py-3 pl-14">
+                              <a href={slink.link}>{slink.name}</a>
+                            </li>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </>
           <li>
-            <a href="/" className="text-white py-7 px-3 inline-block">
-              Project
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/proyek");
+              }}
+              className="text-white py-7 px-3 inline-block"
+            >
+              {t("cek")}
             </a>
           </li>
           <li>
-            <a href="/" className="text-white py-7 px-3 inline-block">
-              Team
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/berita");
+              }}
+              className="text-white py-7 px-3 inline-block"
+            >
+              {t("berita")}
             </a>
           </li>
           <li>
-            <a href="/" className="text-white py-7 px-3 inline-block">
-              News
-            </a>
-          </li>
-          <li>
-            <a href="/" className="text-white py-7 px-3 inline-block">
-              Contact
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/hubungi");
+              }}
+              className="text-white py-7 px-3 inline-block"
+            >
+              {t("hubungi")}
             </a>
           </li>
         </ul>

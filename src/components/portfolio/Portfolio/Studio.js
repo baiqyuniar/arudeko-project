@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import studioList from "../PortfolioList/studioList";
 import { useTranslation } from "react-i18next";
+import studioList from "../PortfolioList/studioList";
 
 const Studio = () => {
   const [mainPicture, setMainPicture] = useState(0);

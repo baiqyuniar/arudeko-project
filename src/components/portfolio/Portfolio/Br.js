@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import brList from "../PortfolioList/brList";
 import { useTranslation } from "react-i18next";
+import brList from "../PortfolioList/brList";
 
 const Br = () => {
   const [mainPicture, setMainPicture] = useState(0);

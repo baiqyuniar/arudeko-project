@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import publikList from "../PortfolioList/publikList";
 import { useTranslation } from "react-i18next";
+import publikList from "../PortfolioList/publikList";
 
 const Publik = () => {
   const [mainPicture, setMainPicture] = useState(0);

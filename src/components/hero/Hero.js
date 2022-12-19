@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       <div className="py-4 w-full lg:py-12">
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-7 sm:max-w-sm sm:mx-auto lg:max-w-full">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-6 sm:max-w-sm sm:mx-auto lg:max-w-full">
           <div
             onClick={(e) => {
               e.preventDefault();
@@ -185,7 +185,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div
+          {/* <div
             onClick={(e) => {
               e.preventDefault();
               navigate("/hubungi");
@@ -219,7 +219,7 @@ const Hero = () => {
                 ></path>
               </svg>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

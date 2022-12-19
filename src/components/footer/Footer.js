@@ -302,10 +302,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <hr className="my-6 border-gray-500 sm:mx-auto lg:my-8" />
 
-        <p className="mt-8 text-xs font-semibold text-black text-center">
-          © Copyright 2022, PT.Abiudaya Raya Utama Head Office, <br />
+        <p className="mt-8 text-base font-bold text-black text-center">
+          © Copyright 2022, PT. Abiudaya Raya Utama <br />
           All rights reserved. Various trademarks held by their respective
           owners.
         </p>

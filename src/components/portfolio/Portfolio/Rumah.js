@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import rumahList from "../PortfolioList/rumahList";
 import { useTranslation } from "react-i18next";
+import rumahList from "../PortfolioList/rumahList";
 
 const Rumah = () => {
   const [mainPicture, setMainPicture] = useState(0);

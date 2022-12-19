@@ -5,19 +5,19 @@ const publikList = {
   pictures: [
     {
       src: require("../../../assets/publik1.png"),
-      alt: "Landscape Ruang Publik 1",
+      alt: "Landskap Ruang Publik 1",
     },
     {
       src: require("../../../assets/publik2.png"),
-      alt: "Landscape Ruang Publik 2",
+      alt: "Landskap Ruang Publik 2",
     },
     {
       src: require("../../../assets/publik3.png"),
-      alt: "Landscape Ruang Publik 3",
+      alt: "Landskap Ruang Publik 3",
     },
     {
       src: require("../../../assets/publik4.png"),
-      alt: "Landscape Ruang Publik 4",
+      alt: "Landskap Ruang Publik 4",
     },
   ],
 };

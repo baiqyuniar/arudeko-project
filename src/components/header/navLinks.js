@@ -1,4 +1,4 @@
-export const links = [
+const navLink = [
   {
     name: "Tentang Kami",
     submenu: true,
@@ -94,3 +94,5 @@ export const links = [
     ],
   },
 ];
+
+export default navLink;

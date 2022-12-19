@@ -5,11 +5,11 @@ const bedList = {
   pictures: [
     {
       src: require("../../../assets/bed1.png"),
-      alt: "Interior Bed Room 1",
+      alt: "Interior Kamar Tidur 1",
     },
     {
       src: require("../../../assets/bed2.png"),
-      alt: "Interior Bed Room 2",
+      alt: "Interior Kamar Tidur 2",
     },
   ],
 };
