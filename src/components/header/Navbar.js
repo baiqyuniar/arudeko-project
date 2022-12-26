@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const languages = [
-  { value: "", text: "Pilihan", disabled: true },
   { value: "id", text: "Indonesia" },
   { value: "en", text: "English" },
 ];
@@ -21,9 +20,10 @@ const Navbar = () => {
 
   const { t } = useTranslation();
 
-  const [lang, setLang] = useState("null");
+  const [lang, setLang] = useState(localStorage.getItem("lang"));
 
   const handleChange = (e) => {
+    localStorage.setItem("lang", e.target.value);
     setLang(e.target.value);
     let loc = window.location.pathname;
     window.location.replace(loc + "?lng=" + e.target.value);
